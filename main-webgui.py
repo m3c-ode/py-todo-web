@@ -8,7 +8,6 @@ def add_todo():
     functions.addTodoToFile(todos)
 
 
-print("START")
 st.title("Todo Manager")
 st.subheader("App to manage daily activities")
 
@@ -28,5 +27,3 @@ newTodo = st.text_input(
     key="newTodo",
     on_change=add_todo,
 )
-
-st.session_state
