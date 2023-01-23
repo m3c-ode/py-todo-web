@@ -1,4 +1,5 @@
 FILEPATH = "./todos.txt"
+from typing import List
 
 
 def showTodos(filepath=FILEPATH):
@@ -12,7 +13,7 @@ def showTodos(filepath=FILEPATH):
     return todos_local
 
 
-def addTodoToFile(todos_arg, filepath=FILEPATH):
+def addTodoToFile(todos_arg: List[str], filepath=FILEPATH) -> None:
     """Overwites the file containing todos with the list passed as argument."""
     with open(filepath, "w") as file:
         file.writelines(todos_arg)
