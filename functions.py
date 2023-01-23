@@ -12,14 +12,14 @@ def showTodos(filepath=FILEPATH):
     return todos_local
 
 
-def addTodoToFile(todos_arg: list[str], filepath=FILEPATH):
+def addTodoToFile(todos_arg, filepath=FILEPATH):
     """Overwites the file containing todos with the list passed as argument."""
     with open(filepath, "w") as file:
         file.writelines(todos_arg)
 
 
 # __name__ will return the name of the file
-print(__name__)
+# print(__name__)
 
 # this conditional block act as a guard depending what file is being compiled. Will act as if THIS file is ran
 if __name__ == "__main__":
