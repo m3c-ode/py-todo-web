@@ -12,7 +12,7 @@ def showTodos(filepath=FILEPATH):
     return todos_local
 
 
-def addTodoToFile(todos_arg: list[str], filepath=FILEPATH) -> None:
+def addTodoToFile(todos_arg: list[str], filepath=FILEPATH):
     """Overwites the file containing todos with the list passed as argument."""
     with open(filepath, "w") as file:
         file.writelines(todos_arg)
