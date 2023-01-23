@@ -1,6 +1,8 @@
 import streamlit as st
 import functions
 
+st.set_page_config(layout="wide")
+
 
 def add_todo():
     newTodo = st.session_state["newTodo"]
@@ -10,6 +12,10 @@ def add_todo():
 
 st.title("Todo Manager")
 st.subheader("App to manage daily activities")
+st.write(
+    "<b>Organize</b> your day and increase your <b>productivity</b>",
+    unsafe_allow_html=True,
+)
 
 todos = functions.showTodos()
 for todo in todos:
